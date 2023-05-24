@@ -1,0 +1,72 @@
+@use "../../../assets/scss/variables" as var;
+@use "../../../assets/scss/mixins" as mixin;
+@use "../../../assets/scss/fonts" as font;
+
+.wrapper-home {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../../assets/images/bg-home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 71%;
+
+    .header {
+        display: none;
+
+        @include mixin.tablet {
+            display: flex;
+            flex: .18;
+
+        }
+    }
+
+    @include mixin.tablet {
+        background-image: url('../../../assets/images/bg-home-moviil-2.png');
+        flex-direction: column;
+    }
+
+    @include mixin.phone {
+        background-image: url('../../../assets/images/bg-home-moviil-2.png');
+    }
+
+    .wrapper-love {
+        flex: 1;
+        background-color: var.$cyan;
+    }
+    love-mail {
+        flex: 1;
+    }
+
+    sweet-love {
+        flex: 1;
+    }
+
+    .wrapper-regulation {
+        position: absolute;
+        bottom: 2.5rem;
+        width: 100vw;
+
+        .btn-regulation {
+            border-radius: 20px;
+            background-color: var.$moss;
+            font-size: 1.5rem;
+            padding: .5rem 1rem;
+            line-height: 1.5rem;
+            font-family: font.$ff-baloo-regular;
+            color: #fff;
+
+            @include mixin.tablet {
+                font-size: .7rem !important;
+                padding: .3rem .5rem !important;
+                line-height: .7rem !important;
+            }
+        }
+
+        @include mixin.tablet {
+            display: none;
+        }
+    }
+
+
+}

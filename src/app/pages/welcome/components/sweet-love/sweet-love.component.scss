@@ -1,0 +1,123 @@
+@use "../../../../../assets/scss/variables" as var;
+@use "../../../../../assets/scss/fonts" as font;
+@use "../../../../../assets/scss/mixins" as mixin;
+
+@mixin button($color) {
+    border-radius: 20px;
+    background-color: $color;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    line-height: 1.5rem;
+    font-family: font.$ff-baloo-regular;
+    color: #fff;
+
+    @include mixin.tablet {
+        font-size: .7rem;
+        padding: .3rem .5rem;
+        line-height: .7rem;
+    }
+}
+
+
+.sweet-love {
+    @include mixin.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100% - 10.5rem);
+    }
+}
+
+.wrapper-img {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mixin.tablet {
+        height: 100%;
+    }
+
+    .img-sweet-love {
+        background-image: url('../../../../../assets/images/sweet-love.png');
+        height: 27vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 0.5s ease;
+
+        @include mixin.tablet {
+            height: 5rem;
+        }
+
+        ._img_ {
+            height: 27vh;
+
+            @include mixin.tablet {
+                height: 5rem;
+            }
+        }
+
+        .wrapper-hide {
+            display: none;
+            opacity: 0;
+
+            @include mixin.tablet {
+                opacity: 1;
+                display: block;
+            }
+
+            .custom-text {
+                color: #fff;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                font-family: font.$ff-baloo-semibold;
+
+                @include mixin.tablet {
+                    font-size: 0.7rem;
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+
+            .btn-want-know {
+                @include button(var.$cyan);
+            }
+
+            .btn-regulation {
+                @include button(var.$moss);
+                display: none;
+
+                @include mixin.tablet {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: .8rem;
+                }
+            }
+        }
+
+        &:hover {
+            margin-top: -18rem;
+
+            @include mixin.tablet {
+                margin-top: 0;
+            }
+
+            .wrapper-hide {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+
+    
+    
+}
+
+.wrapper-regulation {
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    right: 0;
+}

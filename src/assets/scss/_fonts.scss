@@ -1,0 +1,57 @@
+
+
+$ff-baloo-regular: 'Baloo Regular';
+$ff-baloo-medium: 'Baloo Medium';
+$ff-baloo-semibold: 'Baloo SemiBold';
+$ff-baloo-bold: 'Baloo Bold';
+$ff-gotham-book: 'Gotham Book';
+$ff-gotham-medium: 'Gotham Medium';
+
+
+@font-face {
+    font-family: 'Baloo Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: local('Roboto Regular'), url('../fonts/Baloo-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Baloo Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: local('Roboto Medium'), url('../fonts/Baloo2-Medium.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Baloo SemiBold';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: local('Roboto SemiBold'), url('../fonts/Baloo2-SemiBold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Baloo Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: local('Roboto Bold'), url('../fonts/Baloo2-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Gotham Book';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: local('Gotham Book'), url('../fonts/Gotham-Book\ 2.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Gotham Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: local('Gotham Medium'), url('../fonts/GothamMedium.ttf') format('truetype');
+  }

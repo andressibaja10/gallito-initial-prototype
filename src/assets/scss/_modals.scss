@@ -1,0 +1,104 @@
+@use "./variables" as var;
+@use "./fonts" as font;
+@use "./mixins" as mixin;
+
+.cdk-overlay-dark-backdrop {
+    background: rgba(0, 0, 0, .7) !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+@mixin container($image, $color, $height-container) {
+    mat-dialog-container {
+        padding: 0;
+        background-image: $image;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: $height-container;
+        width: 33vw;
+        background-color: transparent;
+        box-shadow: none;
+        position: relative;
+
+        @include mixin.phone {
+            background-size: 100% 100%;
+            height: 26rem;
+            width: 90vw;
+        }
+
+        @include mixin.only-phone-small {
+            height: 24rem;
+        }
+
+        .wrapper-btn-start {
+            position: absolute;
+            bottom: 3%;
+            width: 100%;
+            text-align: center;
+
+            @include mixin.phone {
+                bottom: 1.1rem;
+            }
+
+            .btn-start {
+                border-radius: 10px;
+                background-color: $color;
+                font-size: 1.2rem;
+                padding: .5rem 1.1rem;
+                line-height: 1.3rem;
+                font-family: font.$ff-baloo-regular;
+                color: #fff;
+                margin-left: .5rem;
+
+                @include mixin.phone {
+                    border-radius: 8px;
+                    font-size: .8rem;
+                    padding: 0.4rem 1rem;
+                    line-height: .8;
+                    margin-left: 0.1rem;
+                }
+            }
+        }
+    }
+}
+
+.wrapper-modal-love-mail {
+    @include container(url('../images/modal-love-mail.png'), var.$red, 37vw);
+
+    mat-dialog-container {
+
+        .wrapper-btn-start {
+            bottom: 8%;
+        }
+
+        @include mixin.desktop {
+            background-size: contain !important;
+        }
+
+        @include mixin.tablet {
+            background-size: 100% 100%;
+        }
+    }
+}
+
+
+.wrapper-modal-sweet-love {
+    @include container(url('../images/modal-sweet-love.png'), var.$cyan, 35vw);
+
+    mat-dialog-container {
+
+        .wrapper-btn-start {
+
+            .btn-start {
+
+                @include mixin.phone {
+                    margin-left: 0.6rem;
+                }
+            }
+        }
+    }
+}
